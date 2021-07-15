@@ -13,18 +13,6 @@ class Chessboard
     init_squares
   end
 
-  def inbounds?(location)
-    if location.instance_of?(Array)
-      return false unless (0..7).include?(location[0]) && (0..7).include?(location[1])
-    elsif location.instance_of?(String)
-      return false unless ('a'..'h').include?(location[0].downcase) && (1..8).include?(location[1].to_i)
-    else
-      return nil # can't identify the location
-    end
-
-    true
-  end
-
   def square(location)
     return nil unless inbounds?(location)
 

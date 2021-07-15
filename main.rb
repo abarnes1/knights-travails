@@ -14,7 +14,7 @@ while play_again == 'y'
   puts "#{board}\n"
 
   starting_position = PlayerInput.start_square
-  ending_position = PlayerInput.ending_square
+  ending_position = PlayerInput.end_square
 
   travails = KnightsTravails.new
   puts "\nTraversing from #{starting_position} to #{ending_position}"

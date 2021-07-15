@@ -6,13 +6,14 @@ $stdout.sync = true # allows use of print keep prompt and input on same line
 
 class PlayerInput
   extend PositionHelpers
+
   def self.start_square
     print 'Enter a valid (a8, b3, f5, etc...) starting square: '
 
     input_square
   end
 
-  def self.ending_square
+  def self.end_square
     print 'Enter a valid (a8, b3, f5, etc...) ending square: '
 
     input_square

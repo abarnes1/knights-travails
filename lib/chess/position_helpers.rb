@@ -1,12 +1,8 @@
 module PositionHelpers
   def inbounds?(location)
-    if location.instance_of?(Array)
-      return false unless (0..7).include?(location[0]) && (0..7).include?(location[1])
-    elsif location.instance_of?(String)
-      return false unless ('a'..'h').include?(location[0].downcase) && (1..8).include?(location[1..-1].to_i)
-    else
-      return nil # can't identify the location
-    end
+    return nil unless location.instance_of?(String) # can't identify the location
+
+    return false unless ('a'..'h').include?(location[0].downcase) && (1..8).include?(location[1..-1].to_i)
 
     true
   end
